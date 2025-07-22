@@ -1,5 +1,7 @@
 import React from "react";
+import Footer from "./footer/Footer";
 import Navbar from "./navbar/Navbar";
+import Container from "./Container";
 
 interface ILayoutProps {
    children: React.ReactNode;
@@ -7,12 +9,13 @@ interface ILayoutProps {
 
 function Layout({ children }: ILayoutProps) {
    return (
-      <>
-         <div className="flex flex-col justify-between min-h-screen">
-         <Navbar />
+      <div>
+         <Container>
+            <Navbar />
             {children}
-         </div>
-      </>
+         </Container>
+         <Footer />
+      </div>
    );
 }
 

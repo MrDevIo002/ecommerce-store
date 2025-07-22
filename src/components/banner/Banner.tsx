@@ -1,11 +1,10 @@
 import Carousel from "@/ui/Carousel";
-import Container from "../Container";
 
 const Banner = () => {
    return (
-      <Container>
+      <div className="mt-20">
          <Carousel />
-      </Container>
+      </div>
    );
 };
 

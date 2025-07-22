@@ -1,7 +1,5 @@
-import Container from "@/components/Container";
-
 function Products() {
-   return <Container>Products</Container>;
+   return <div>Products</div>;
 }
 
 export default Products;

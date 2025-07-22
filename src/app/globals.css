@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
 @layer components {
-   .main {
-      @apply flex flex-col justify-center items-center h-screen;
+   *,
+   *::after,
+   *::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
    }
 
    body {
       font-family: Arial, Helvetica, sans-serif;
+      min-block-size: 100vh;
+      min-block-size: 100dvh;
+      background-color: var(--White);
+      padding-inline: calc(max(100% - var(--full-width), 8.5% / 2));
+      
+      /* @apply min-h-screen bg-sky-100 [padding-inline:calc(max(100%-var(90rem),8.5%/2))] [min-block-size:100dvh]; */
+   }
+
+   .home {
+      @apply flex flex-col items-center justify-center;
    }
 }

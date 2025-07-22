@@ -24,7 +24,7 @@ function Carousel() {
    };
 
    return (
-      <div className="w-full flex items-center justify-center gap-8">
+      <div className="flex w-full items-center justify-center gap-8">
          {/* Prev Button */}
          <Button variant="sliderButton" onClick={prevSlide}>
             <MoveLeftIcon />
@@ -37,7 +37,7 @@ function Carousel() {
                style={{ transform: `translateX(-${current * 100}%)` }}
             >
                {images.map((img, index) => (
-                  <div key={index} className="flex-shrink-0 w-full">
+                  <div key={index} className="w-full flex-shrink-0">
                      <Image
                         src={img}
                         alt={`Slide ${index + 1}`}

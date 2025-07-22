@@ -3,7 +3,7 @@ import Welcome from "@/components/welcome/Welcome";
 
 export default function Home() {
    return (
-      <main className="main">
+      <main className="home">
          <Banner />
          <Welcome />
       </main>
