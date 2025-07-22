@@ -8,6 +8,7 @@ import img2 from "../assets/img/2.png";
 import img3 from "../assets/img/3.jpg";
 import img4 from "../assets/img/4.webp";
 import { MoveLeftIcon, MoveRightIcon } from "lucide-react";
+import Button from "./Button";
 
 const images = [img1, img2, img3, img4];
 
@@ -25,15 +26,12 @@ function Carousel() {
    return (
       <div className="w-full flex items-center justify-center gap-8">
          {/* Prev Button */}
-         <button
-            onClick={prevSlide}
-            className="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80"
-         >
+         <Button variant="sliderButton" onClick={prevSlide}>
             <MoveLeftIcon />
-         </button>
+         </Button>
 
          {/* Carousel */}
-         <div className="w-full max-w-4xl overflow-hidden rounded-lg">
+         <div className="w-full max-w-5xl overflow-hidden rounded-lg">
             <div
                className="flex transition-transform duration-500"
                style={{ transform: `translateX(-${current * 100}%)` }}
@@ -52,12 +50,9 @@ function Carousel() {
          </div>
 
          {/* Next Button */}
-         <button
-            onClick={nextSlide}
-            className="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80"
-         >
+         <Button variant="sliderButton" onClick={nextSlide}>
             <MoveRightIcon />
-         </button>
+         </Button>
       </div>
    );
 }

@@ -1,7 +1,12 @@
 import Carousel from "@/ui/Carousel";
+import Container from "../Container";
 
 const Banner = () => {
-   return <Carousel />;
+   return (
+      <Container>
+         <Carousel />
+      </Container>
+   );
 };
 
 export default Banner;

@@ -3,9 +3,9 @@ import Welcome from "@/components/welcome/Welcome";
 
 export default function Home() {
    return (
-      <div>
+      <main className="main">
          <Banner />
          <Welcome />
-      </div>
+      </main>
    );
 }
